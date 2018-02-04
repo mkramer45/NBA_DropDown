@@ -1,0 +1,36 @@
+{% extends "template.html" %}
+{% block content %}
+<h1> Enter the Soundcloud link!</h1>
+<form method="POST" action="/soundcloudtime">
+   <table>
+      <tr>
+         <td style="padding-right: 10px">Link</td>
+         <td><input type="text" name="SCLink" /></td>
+		 <td><input type="submit" value="Submit!" /></td>
+      </tr>
+   </table>
+</form>
+
+<h2> Enter The Desired Time!</h2>
+<form method="POST" action="/soundcloudtime">
+   <table>
+      <tr>
+         <td style="padding-right: 10px">Time</td>
+         <td><input type="text" name="SCTime" /></td>
+       <td><input type="submit" value="Submit!" /></td>
+      </tr>
+   </table>
+</form>
+
+<h3>Generate Soundcloud time specific link</h3>
+{% for message in get_flashed_messages() %}
+<div class="alert alert-success">{{ message }}</div>
+{% endfor %}
+<table class="table table-striped table-bordered table-hover table condensed">
+{% for x in Final_URL %}
+<tr>
+   <td>{{ x.Final_URL }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

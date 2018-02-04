@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block content %}
+<h3>Celtics Roster</h3>
+<table class="table table-striped table-bordered table-hover table condensed">
+{% for x in info %}
+<tr>
+   <td>{{ x.FirstName }}</td>
+   <td>{{ x.LastName }}</td>
+   <td>{{ x.College_Country }}</td>
+   <td>{{ x.Height }}</td>
+   <td>{{ x.Weight }}</td>
+   <td>{{ x.Position }}</td>
+   <td>{{ x.Birthdate }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

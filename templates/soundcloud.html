@@ -1,0 +1,24 @@
+
+{% block content %}
+
+	<h1>Enter the Soundcloud link!</h1>
+
+	<form method="POST" action="/soundcloud">
+		<table>
+			<tr><td>Soundcloud URL<td><input type="text" name="URL" /></td></tr>
+			<tr><td>Desired Starting Time<td><input type="text" name="Time" /></td></tr>
+		</table>
+
+	<input type="submit" value="Generate Soundcloud Link!" />
+
+	</form>
+
+	<h2>Your Time Specific Soundcloud Link</h2>
+	<table>
+		<tr>
+			<td>{{ appendx_sc }}</td>
+		</tr>
+	<table>
+	{% endblock %}
+
+

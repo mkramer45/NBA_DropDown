@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Beatscrape</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+   </head>
+   <body>
+      <header>
+         <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+               <a class="navbar-brand" href="/">Real Python For The Web</a>
+               <ul class="nav navbar-nav">
+                  <li><a data-toggle="tab" href="/">Home</a></li>
+                  <li><a data-toggle="tab" href="/register">Register</a></li>
+                  <li><a data-toggle="tab" href="/welcome">Welcome</a></li>
+                  <li><a data-toggle="tab" href="/log">Login</a></li>
+                  <li><a data-toggle="tab" href="/scrapelist2">ScrapeList2</a></li>
+                  <li><a data-toggle="tab" href="/youtube">YoutubeTime</a></li>
+                  <li><a data-toggle="tab" href="/soundcloud">SoundcloudTime</a></li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">NBAx <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Eastern Conference</a></li>
+                        <li><a href="#">Western Conference</a></li>
+                     </ul>
+                  </li>
+                  <li><a data-toggle="tab" href="/NBA">NBA</a></li>
+               </ul>
+            </div>
+         </div>
+         <script src="content/js/jquery.min.js"></script>
+         <script src="content/js/bootstrap.min.js"></script>
+         <script>
+            $(document).ready(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+         </script>
+      </header>
+      <div class="container">
+         {% block content %}
+         {% endblock %}
+      </div>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+
+{% block content %}
+
+	<h1>Enter the Youtube link!</h1>
+
+	<form method="POST" action="/send">
+		<table>
+			<tr><td>Youtube URL<td><input type="text" name="URL" /></td></tr>
+			<tr><td>Desired Starting Time in Minutes<td><input type="text" name="TimeMM" /></td></tr>
+			<tr><td>Desired Starting Time in Seconds<td><input type="text" name="TimeSS" /></td></tr>
+		</table>
+
+	<input type="submit" value="Generate Link!" />
+
+	</form>
+
+	<h2>Your Time Specific Youtube Link</h2>
+	<table>
+		<tr>
+			<td>{{ appendx }}</td>
+		</tr>
+	<table>
+	{% endblock %}
+
+

@@ -1,0 +1,22 @@
+
+{% block content %}
+
+	<h1> Enter the Artists you want to monitor!</h1>
+
+	<form method="POST" action="/send">
+		<table>
+			<tr><td>Artist Name</td><td><input type="text" name="age" /></td></tr>
+		</table>
+
+	<input type="submit" value="Press Me!" />
+
+	</form>
+
+	<h2>Your Beatscrape Artists</h2>
+	<table>
+		<tr>
+			<td>{{artists1}}</td>\
+		</tr>
+	{% endblock %}
+
+
